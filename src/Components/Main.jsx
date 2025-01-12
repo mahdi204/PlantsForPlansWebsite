@@ -8,7 +8,7 @@ const Main = () => {
                     <div>STOP</div>
                     <div>WASTING</div>
                     <div>YOUR</div>
-                    <div style={{ color: '#ff5733' }}>TIME</div>
+                    <div style={{ color: '#60e05c' }}>TIME</div>
                 </div>
                 <p>this is where the big header will be added</p>
             </section>
