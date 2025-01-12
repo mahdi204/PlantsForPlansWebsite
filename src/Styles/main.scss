@@ -1,0 +1,10 @@
+@import "~pixel-borders/pixel-borders.scss";
+.pixel-borders--custom {
+    @include pixel-borders(
+      $corner-size: 2,                  // Customize corner size
+      $border-size: 4px,               // Border thickness
+      $border-color: #ff5733,          // Border color
+      $border-inset-color: false       // No inset color
+    );
+  }
+  
