@@ -9,7 +9,7 @@ const Navbar = () => {
                 <li>About</li>
                 <li>Content</li>
                 <button >Log In</button>
-                <button className='w-20 h-10 font-medium bg-white text-black ' >Sign Up</button>
+                <button className='w-20 h-10 font-medium text-black ' style={{ background: '#f5f5dc' }}>Sign Up</button>
             </ul>
         </div>
 
