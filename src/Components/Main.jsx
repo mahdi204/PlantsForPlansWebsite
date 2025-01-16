@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "motion/react"
 
 const Main = () => {
     function heroTextChanger() {
@@ -25,9 +26,9 @@ const Main = () => {
             document.getElementById("hero-third-word").textContent = thirdWord;
             document.getElementById("hero-forth-word").textContent = forthWord;
         }, 7000)
-
     }
     heroTextChanger();
+
     return (
         <div className='flex  w-100% items-center h-[calc(100vh-8rem)]'>
             <section className='w-1/2 flex justify-center flex-col'>
@@ -48,17 +49,19 @@ const Main = () => {
             </div>
 
             <section className='w-1/2 flex justify-center items-center'>
-                <img src="/images/iso-block.png" alt="image" />
+                <motion.img
+                    src='/images/iso-block.png'
+                    alt='animated image'
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 0.8,
+                        delay: 0.5,
+                        ease: [0, 0.71, 0.2, 1.01],
+                    }}
+                ></motion.img>
             </section>
-            {/* This is just a pixel art border */}
-            {/* <div className='relative '>
-                <div className='w-40 h-80' style={{ border: '8px solid #f5f5dc' }}></div>
-                <div className=' absolute top-0 right-0 w-2 h-2' style={{ background: '#1f1f1f' }}></div>
-                <div className='absolute top-0 left-0 w-2 h-2' style={{ background: '#1f1f1f' }}></div>
-                <div className='absolute bottom-0 right-0 w-2 h-2' style={{ background: '#1f1f1f' }}></div>
-                <div className='absolute bottom-0 left-0 w-2 h-2' style={{ background: '#1f1f1f' }}></div>
-            </div> */}
-        </div>
+        </div >
     )
 }
 

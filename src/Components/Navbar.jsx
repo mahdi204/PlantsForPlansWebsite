@@ -1,4 +1,5 @@
 import React from 'react'
+import { color, motion } from "motion/react"
 
 const Navbar = () => {
     return (
@@ -33,14 +34,25 @@ const Navbar = () => {
                         Login
                     </button>
                 </li>
-                <button type="button" class="w-20 h-10 text-nowrap inline-flex items-center justify-center border-2 bg-[#f5f5dc] border-transparent px-12 py-3 text-center text-base font-bold text-black transition-all duration-200 ease-in-out focus:shadow hover:border-[#f5f5dc] hover:bg-transparent hover:text-[#f5f5dc]">
+                <motion.button
+                    whileHover={{ scale: 1.2, backgroundColor: "transparent", color: "#f5f5dc" }}
+                    whileTap={{ scale: 0.9 }}
+                    style={buttonStyle}
+                >
                     Sign Up
-                </button>
-
+                </motion.button>
             </ul>
         </div>
-
     )
+}
+const buttonStyle = {
+    color: "#1f1f1f",
+    width: "70px",
+    height: "35px",
+    border: "2px solid #f5f5dc",
+    backgroundColor: "#f5f5dc",
+    borderRadius: "0px",
+    cursor: "pointer",
 }
 
 export default Navbar
