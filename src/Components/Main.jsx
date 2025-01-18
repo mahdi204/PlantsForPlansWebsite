@@ -1,51 +1,120 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from "motion/react"
 
 const Main = () => {
-    function heroTextChanger() {
-        let firstWord, secondWord, thirdWord, forthWord;
-        let toggle = false;
-        //put a time counter that count then change a boolean variable to change the words of the hero
-        setInterval(() => {
-            toggle = !toggle;
 
-            if (toggle == true) {
-                firstWord = "STOP"
-                secondWord = "WASTING"
-                thirdWord = "YOUR"
-                forthWord = "TIME"
-            }
-            else {
-                firstWord = "START"
-                secondWord = "GETTING"
-                thirdWord = "JOB"
-                forthWord = "DONE"
-            }
-            document.getElementById("hero-first-word").textContent = firstWord;
-            document.getElementById("hero-second-word").textContent = secondWord;
-            document.getElementById("hero-third-word").textContent = thirdWord;
-            document.getElementById("hero-forth-word").textContent = forthWord;
-        }, 7000)
-    }
-    heroTextChanger();
+    const [heroText, setHeroText] = useState({
+        first: "STOP",
+        second: "WASTING",
+        third: "YOUR",
+        forth: "TIME",
+    });
+    const [toggle, setToggle] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setToggle((prevToggle) => !prevToggle);
+        }, 7000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        if (toggle) {
+            setHeroText({
+                first: "START",
+                second: "GETTING",
+                third: "JOB",
+                forth: "DONE"
+            });
+        }
+        else {
+            setHeroText({
+                first: "STOP",
+                second: "WASTING",
+                third: "YOUR",
+                forth: "TIME",
+            });
+        }
+    }, [toggle]);
 
     return (
         <div className='flex  w-100% items-center h-[calc(100vh-8rem)]'>
             <section className='w-1/2 flex justify-center flex-col'>
-                <div style={{ fontSize: '150px' }} className=' p-0 m-0 flex flex-col leading-none font-bold'>
-                    <div id='hero-first-word'>STOP</div>
-                    <div id='hero-second-word'>WASTING</div>
-                    <div id='hero-third-word'>YOUR</div>
-                    <div id='hero-forth-word' style={{ color: '#60e05c' }}>TIME</div>
-                </div>
-                <p>this is where the big header will be added</p>
+                <motion.div
+                    style={{ fontSize: '150px' }}
+                    className='p-0 m-0 flex flex-col leading-none font-bold'
+                    initial={{ opacity: 0, y: -80 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                    <motion.div
+                        key={heroText.first}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        {heroText.first}
+                    </motion.div>
+                    <motion.div
+                        key={heroText.second}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        {heroText.second}
+                    </motion.div>
+                    <motion.div
+                        key={heroText.third}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        {heroText.third}
+                    </motion.div>
+                    <motion.div
+                        key={heroText.forth}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        style={{ color: '#60e05c' }}
+                    >
+                        {heroText.forth}
+                    </motion.div>
+                </motion.div>
+                <p>this is my paragraph under the hero header</p>
             </section>
-            <div>
-                <div className='h-[10px] w-[10px] mb-[10px] bg-[#f5f5dc]'></div>
-                <div className='h-[10px] w-[10px] mb-[10px] bg-[#f5f5dc]'></div>
-                <div className='h-[500px] w-[10px] bg-[#f5f5dc]'></div>
-                <div className='h-[20px] w-[10px] mt-[10px] bg-[#f5f5dc]'></div>
-                <div className='h-[10px] w-[10px] mt-[10px] bg-[#f5f5dc]'></div>
+            <div style={{ width: "10px", margin: "0 auto" }}>
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="h-[10px] w-[10px] mb-[10px] bg-[#f5f5dc]"
+                ></motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    className="h-[10px] w-[10px] mb-[10px] bg-[#f5f5dc]"
+                ></motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                    className="h-[500px] w-[10px] bg-[#f5f5dc]"
+                ></motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                    className="h-[20px] w-[10px] mt-[10px] bg-[#f5f5dc]"
+                ></motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    className="h-[10px] w-[10px] mt-[10px] bg-[#f5f5dc]"
+                ></motion.div>
             </div>
 
             <section className='w-1/2 flex justify-center items-center'>
@@ -56,7 +125,7 @@ const Main = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{
                         duration: 0.8,
-                        delay: 0.5,
+                        delay: 0.9,
                         ease: [0, 0.71, 0.2, 1.01],
                     }}
                 ></motion.img>
