@@ -3,7 +3,7 @@ import { color, motion } from "motion/react"
 
 const Navbar = () => {
     return (
-        <div className='flex justify-between items-center h-24 w-100%'>
+        <div className='flex justify-between items-center h-18 w-100%'>
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
