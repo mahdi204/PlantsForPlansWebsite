@@ -12,12 +12,16 @@ import { easeInOut } from 'motion'
 const Explanation = () => {
     const images = [image1, image2, image3, image4]
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isInView, SetIsInView] = useState(false);
+
     useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-        }, 4000)
-        return () => clearInterval(interval);
-    }, [images.length])//for performance issues
+        if (isInView) {
+            const interval = setInterval(() => {
+                setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+            }, 3000)
+            return () => clearInterval(interval);
+        }
+    }, [isInView, images.length])//for performance issues
 
     return (
         <div className='flex ml-60 mr-60 items-center justify-between h-[100vh] bg-[#1f1f1f]]'>
@@ -26,6 +30,8 @@ const Explanation = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.8 }}
+                onViewportEnter={() => SetIsInView(true)}
+                onViewportLeave={() => SetIsInView(false)}
                 className=''
             >
                 <div className='relative' id='plantContainer'>
