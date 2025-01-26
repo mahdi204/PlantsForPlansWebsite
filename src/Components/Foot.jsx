@@ -1,11 +1,12 @@
 import { div } from 'motion/react-client'
 import React from 'react'
 
+
 const Foot = () => {
     return (
         <div
-            className=' bg-[#60e05c] text-[#1f1f1f]'
-            style={{ fontFamily: 'poppins', fontWeight: 200 }}
+            className=' bg-[#60e05c] text-[#f5f5dc]'
+            style={{ fontFamily: 'Outfit', fontWeight: 200 }}
         >
             <div className='flex justify-end items-end w-[100%] bg-[#1f1f1f] h-[100px]  '>
                 <div className='mr-60 ml-60'>
@@ -19,8 +20,8 @@ const Foot = () => {
                 </div>
 
             </div>
-            <div className='flex ml-60 mr-60 h-[300px]' style={{ fontWeight: 600 }} >
-                <p className='text-4xl'>This is the Footer</p>
+            <div className='flex ml-60 mr-60 h-[300px] uppercase' style={{ fontWeight: 700 }} >
+                <p className='text-6xl'>This is the Footer</p>
             </div>
         </div>
     )
