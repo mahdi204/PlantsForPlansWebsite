@@ -47,7 +47,7 @@ const Explanation = () => {
                     ></motion.img>
                     <img
                         className="max-w-[400px] h-auto object-contain"
-                        src="/images/pixel-mobile.png"
+                        src="/images/pixel-mobile-2.png"
                         alt="block"
                     />
                 </div>
