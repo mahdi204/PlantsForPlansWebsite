@@ -22,19 +22,19 @@ const Foot = () => {
             </div>
             <div className='flex justify-between ml-60 mr-60 h-[300px] uppercase' style={{ fontWeight: 700 }} >
                 <section className='first-col flex flex-col h-full justify-center items-start'>
-                    <div><p>first row</p></div>
-                    <div><p>second row</p></div>
-                    <div><p>third row</p></div>
+                    <p>first row</p>
+                    <p>second row</p>
+                    <p>third row</p>
                 </section>
                 <section className='second-col flex flex-col h-full justify-center items-start'>
-                    <div><p>first row</p></div>
-                    <div><p>second row</p></div>
-                    <div><p>third row</p></div>
+                    <p>first row</p>
+                    <p>second row</p>
+                    <p>third row</p>
                 </section>
                 <section className='third flex flex-col h-full justify-center items-start'>
-                    <div><p>first row</p></div>
-                    <div><p>second row</p></div>
-                    <div><p>third row</p></div>
+                    <p>first row</p>
+                    <p>second row</p>
+                    <p>third row</p>
                 </section>
             </div>
         </div>
