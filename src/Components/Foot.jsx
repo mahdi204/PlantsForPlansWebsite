@@ -20,8 +20,22 @@ const Foot = () => {
                 </div>
 
             </div>
-            <div className='flex ml-60 mr-60 h-[300px] uppercase' style={{ fontWeight: 700 }} >
-                <p className='text-6xl'>This is the Footer</p>
+            <div className='flex justify-between ml-60 mr-60 h-[300px] uppercase' style={{ fontWeight: 700 }} >
+                <section className='first-col flex flex-col h-full justify-center items-start'>
+                    <div><p>first row</p></div>
+                    <div><p>second row</p></div>
+                    <div><p>third row</p></div>
+                </section>
+                <section className='second-col flex flex-col h-full justify-center items-start'>
+                    <div><p>first row</p></div>
+                    <div><p>second row</p></div>
+                    <div><p>third row</p></div>
+                </section>
+                <section className='third flex flex-col h-full justify-center items-start'>
+                    <div><p>first row</p></div>
+                    <div><p>second row</p></div>
+                    <div><p>third row</p></div>
+                </section>
             </div>
         </div>
     )
