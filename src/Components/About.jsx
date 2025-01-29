@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
     return (
         <div>
-            <div className="main-container mr-60 ml-60 h-[100vh] pt-20 pb-20">
+            <div className="about-section flex justify-center items-start flex-col mr-60 ml-60 h-[100vh] " id='about-section'>
                 <h2 className='text-6xl mb-5'>What Is Plants For Plans?</h2>
                 <div className='flex flex-col justify-center items-center w-full ' style={{ fontFamily: 'Outfit', fontWeight: 200, fontSize: '22px' }}>
                     <p >

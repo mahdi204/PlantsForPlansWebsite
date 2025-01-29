@@ -1,5 +1,7 @@
 import React from 'react'
 import { color, motion } from "motion/react"
+import { Link } from "react-scroll"
+
 
 const Navbar = () => {
     return (
@@ -25,11 +27,16 @@ const Navbar = () => {
                         </button>
                     </li>
                     <li>
-                        <button class="relative group  py-1.5 px-2.5 ">
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-50 group-hover:w-full group-hover:transition-all">
-                            </span>
+                        <Link
+                            activeClass="active"
+                            to="about-section"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                            className="relative group  py-1.5 px-2.5 " >
                             About
-                        </button>
+                        </Link>
                     </li>
                     <li>
                         <button class="relative group  py-1.5 px-2.5 ">
