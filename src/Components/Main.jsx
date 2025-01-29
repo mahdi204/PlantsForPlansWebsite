@@ -5,9 +5,9 @@ const Main = () => {
 
     const [heroText, setHeroText] = useState({
         first: "STOP",
-        second: "WASTING",
+        second: "SCROLLING",
         third: "YOUR",
-        forth: "TIME",
+        forth: "PHONE",
     });
     const [toggle, setToggle] = useState(false);
 
@@ -31,9 +31,9 @@ const Main = () => {
         else {
             setHeroText({
                 first: "STOP",
-                second: "WASTING",
+                second: "SCROLLING",
                 third: "YOUR",
-                forth: "TIME",
+                forth: "PHONE",
             });
         }
     }, [toggle]);
@@ -42,7 +42,7 @@ const Main = () => {
         <div className='flex ml-60 mr-60 w-100% items-center h-[calc(100vh)]'>
             <section className='w-1/2 flex justify-center flex-col'>
                 <motion.div
-                    style={{ fontSize: '150px' }}
+                    style={{ fontSize: '120px' }}
                     className='p-0 m-0 flex flex-col leading-none font-bold'
                     initial={{ opacity: 0, y: -80 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -82,7 +82,16 @@ const Main = () => {
                         {heroText.forth}
                     </motion.div>
                 </motion.div>
-                <p>this is my paragraph under the hero header</p>
+                <motion.button
+                    className='bg-[#60e05c] w-[150px] h-[50px] text-[#1f1f1f] mt-10 border-[2px] border-[#60e05c] '
+                    style={{ fontFamily: 'Outfit', fontWeight: 600 }}
+                    whileHover={{ backgroundColor: "transparent", color: "#f5f5dc" }}
+                    whileTap={{ scale: 0.9 }}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                >
+                    Download Now
+                </motion.button>
             </section>
             <div style={{ width: "10px", margin: "0 auto" }}>
                 <motion.div
