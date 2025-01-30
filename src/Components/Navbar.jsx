@@ -20,11 +20,18 @@ const Navbar = () => {
             >
                 <ul className='flex items-center gap-x-14 h-16'>
                     <li>
-                        <button class="relative group  py-1.5 px-2.5 ">
+                        <Link
+                            activeClass="active"
+                            to="home-section"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                            className="relative group  py-1.5 px-2.5 cursor-pointer" >
                             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-50 group-hover:w-full group-hover:transition-all">
                             </span>
                             Home
-                        </button>
+                        </Link>
                     </li>
                     <li>
                         <Link
@@ -34,23 +41,39 @@ const Navbar = () => {
                             smooth={true}
                             offset={0}
                             duration={500}
-                            className="relative group  py-1.5 px-2.5 " >
+                            className="relative group  py-1.5 px-2.5 cursor-pointer" >
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-50 group-hover:w-full group-hover:transition-all">
+                            </span>
                             About
                         </Link>
                     </li>
                     <li>
-                        <button class="relative group  py-1.5 px-2.5 ">
+                        <Link
+                            activeClass="active"
+                            to="plans-section"
+                            spy={true}
+                            smooth={true}
+                            offset={40}
+                            duration={500}
+                            className="relative group  py-1.5 px-2.5 cursor-pointer" >
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-50 group-hover:w-full group-hover:transition-all">
+                            </span>
+                            Planing
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="foot-section"
+                            spy={true}
+                            smooth={true}
+                            offset={40}
+                            duration={500}
+                            className="relative group  py-1.5 px-2.5 cursor-pointer" >
                             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-50 group-hover:w-full group-hover:transition-all">
                             </span>
                             Contact
-                        </button>
-                    </li>
-                    <li>
-                        <button class="relative group  py-1.5 px-2.5 ">
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-50 group-hover:w-full group-hover:transition-all">
-                            </span>
-                            Login
-                        </button>
+                        </Link>
                     </li>
                     <motion.button
                         whileHover={{ scale: 1.2, backgroundColor: "transparent", color: "#f5f5dc" }}

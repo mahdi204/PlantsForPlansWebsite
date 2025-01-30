@@ -24,12 +24,12 @@ const Explanation = () => {
     }, [isInView, images.length])//for performance issues
 
     return (
-        <div className='flex ml-60 mr-60 items-center justify-between h-[100vh] bg-[#1f1f1f]]'>
+        <div className='explanation-section flex ml-60 mr-60 items-center justify-between h-[100vh] bg-[#1f1f1f]]' id='explanation-section'>
             <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.8 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 onViewportEnter={() => SetIsInView(true)}
                 onViewportLeave={() => SetIsInView(false)}
                 className=''

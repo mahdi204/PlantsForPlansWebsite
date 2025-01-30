@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 const Plans = () => {
     return (
-        <div className="relative w-full">
+        <div className="plans-section relative w-full ">
             {/* The content of the Plans */}
             <div className="wrapper flex w-[100%] justify-between items-center">
                 {[...Array(24)].map((_, index) => (
@@ -14,7 +14,7 @@ const Plans = () => {
                 ))}
             </div>
 
-            <div className="the-content-container flex w-[100%] bg-[#f5f5dc] h-[700px]">
+            <div className="the-content-container flex w-[100%] bg-[#f5f5dc] h-[100vh] ">
                 <div
                     className="the-content w-[100%] ml-60 mr-60 my-[40px] flex justify-center flex-col"
                     style={{ fontFamily: 'poppins', fontWeight: 600 }}
@@ -105,6 +105,7 @@ const Plans = () => {
                     </div>
                 </div>
             </div>
+
             <div className="wrapper flex w-[100%] justify-between items-center">
                 {[...Array(24)].map((_, index) => (
                     <div

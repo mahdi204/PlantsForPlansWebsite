@@ -5,8 +5,9 @@ import React from 'react'
 const Foot = () => {
     return (
         <div
-            className=' bg-[#60e05c] text-[#1f1f1f]'
+            className='foot-section bg-[#60e05c] text-[#1f1f1f]'
             style={{ fontFamily: 'Outfit', fontWeight: 200 }}
+            id='foot-section'
         >
             <div className='flex justify-end items-end w-[100%] bg-[#1f1f1f] h-[100px]  '>
                 <div className='mr-60 ml-60'>

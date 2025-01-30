@@ -39,7 +39,7 @@ const Main = () => {
     }, [toggle]);
 
     return (
-        <div className='flex ml-60 mr-60 w-100% items-center h-[calc(100vh)]'>
+        <div className='home-section flex ml-60 mr-60 w-100% items-center h-[calc(100vh)]' id='home-section'>
             <section className='w-1/2 flex justify-center flex-col'>
                 <motion.div
                     style={{ fontSize: '120px' }}
