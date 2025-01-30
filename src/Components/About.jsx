@@ -6,20 +6,23 @@ const About = () => {
 
     const fullText = "What Is Plants For Plans?";
     const [displayedText, setDisplayedText] = useState("");
+    const [isInView, setIsInView] = useState(false);
     const indexRef = useRef(0); // Keeps track of index without causing re-renders
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setDisplayedText(fullText.slice(0, indexRef.current + 1));
-            indexRef.current += 1;
+        if (isInView == true) {
+            const interval = setInterval(() => {
+                setDisplayedText(fullText.slice(0, indexRef.current + 1));
+                indexRef.current += 1;
 
-            if (indexRef.current >= fullText.length) {
-                clearInterval(interval);
-            }
-        }, 20); // Adjust speed here
+                if (indexRef.current >= fullText.length) {
+                    clearInterval(interval);
+                }
+            }, 20); // Adjust speed here
 
-        return () => clearInterval(interval);
-    }, []);
+            return () => clearInterval(interval);
+        }
+    }, [isInView]);
 
     return (
         <div>
@@ -28,17 +31,23 @@ const About = () => {
                     <motion.div
                         // animate from left to right and go back to left
                         initial={{ x: 0 }}
-                        animate={{ x: [0, 850, 0] }}
+                        whileInView={{ x: [0, 850, 0] }}
                         transition={{ duration: 1.5, times: [0, 1] }}
+                        viewport={{ once: true }}
                     >
                         <motion.div
+                            //animate the typing effect
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ duration: 0.1, repeat: Infinity, repeatType: 'reverse', repeatDelay: 0.3 }}
+                            transition={{ duration: 0.05, repeat: Infinity, repeatType: 'reverse', repeatDelay: 0.3 }}
                             className='h-[40px] w-[40px] bg-[#f5f5dc] mr-4'
                         ></motion.div>
                     </motion.div>
-                    <h2 className='text-6xl'>{displayedText}</h2>
+                    <motion.h2
+                        className='text-6xl'
+                        onViewportEnter={() => setIsInView(true)}
+                    >{displayedText}
+                    </motion.h2>
                 </div>
 
                 <motion.div
