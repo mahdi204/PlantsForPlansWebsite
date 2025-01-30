@@ -103,6 +103,14 @@ const Plans = () => {
                         </div>
                         {/* Add other items */}
                     </div>
+                    <motion.p
+                        className='text-[#1f1f1f]'
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: 1 }}
+                    >You can choose between three types of blocks one-block, four-blocks and nine-blocks, each block type represent a period of time. Choosing the time you want the app gives you the block time that you need to start growing your plants
+                    </motion.p>
+
                 </div>
             </div>
 
