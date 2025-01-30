@@ -82,16 +82,23 @@ const Main = () => {
                         {heroText.forth}
                     </motion.div>
                 </motion.div>
-                <motion.button
-                    className='bg-[#60e05c] w-[150px] h-[50px] text-[#1f1f1f] mt-10 border-[2px] border-[#60e05c] '
-                    style={{ fontFamily: 'Outfit', fontWeight: 600 }}
-                    whileHover={{ backgroundColor: "transparent", color: "#f5f5dc" }}
-                    whileTap={{ scale: 0.9 }}
-                    initial={{ opacity: 0, y: -20 }}
+                <motion.div
+                    initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 1.1 }}
                 >
-                    Download Now
-                </motion.button>
+                    <motion.button
+                        className='bg-[#60e05c] w-[150px] h-[50px] text-[#1f1f1f] mt-10 border-[2px] border-[#60e05c] '
+                        style={{ fontFamily: 'Outfit', fontWeight: 600 }}
+                        whileHover={{ backgroundColor: "transparent", color: "#f5f5dc" }}
+                        whileTap={{ scale: 0.9 }}
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                    >
+                        Download Now
+                    </motion.button>
+                </motion.div>
+
             </section>
             <div style={{ width: "10px", margin: "0 auto" }}>
                 <motion.div
