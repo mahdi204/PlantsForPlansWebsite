@@ -11,7 +11,12 @@ const Navbar = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4 }}
             >
-                <h1 className=' font-bold uppercase text-2xl'>plants for plans</h1>
+                <div className='flex justify-center items-center'>
+                    <img
+                        className='w-10 h-10 mr-6'
+                        src="/images/plant for plans logo.png" alt="logo" />
+                    <h1 className=' font-bold uppercase text-2xl'>plants for plans</h1>
+                </div>
             </motion.div>
             <motion.div
                 initial={{ opacity: 0, x: +50 }}
