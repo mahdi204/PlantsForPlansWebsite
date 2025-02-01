@@ -52,10 +52,14 @@ const Explanation = () => {
                     />
                 </div>
             </motion.div>
-            <div className='flex items-center justify-center w-[70%] '>
+            <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className='flex items-center justify-center w-[70%] '>
                 <h2 className='text-6xl'>Stop Scrolling Your Phone</h2>
                 <p>Set your plan time and stick to your work, while giving the plant time to grow.</p>
-            </div>
+            </motion.div>
         </div>
     )
 }
