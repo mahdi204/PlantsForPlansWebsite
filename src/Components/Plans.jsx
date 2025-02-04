@@ -109,7 +109,7 @@ const Plans = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: 1 }}
-                    >You can choose between three types of blocks one-block, four-blocks and nine-blocks, each block type represent a period of time. Choosing the time you want the app gives you the block time that you need to start growing your plants
+                    >You can choose between three types of blocks one-block, four-blocks and nine-blocks, each block type represent a period of time. Choosing the time you want the app gives you the block time that you need to start growing your plants,each type of blocks has a different plant that grows in a different time, with various amount of colorful plants.
                     </motion.p>
 
                 </div>
