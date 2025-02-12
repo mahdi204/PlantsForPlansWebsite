@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { motion } from "motion/react"
 
 const Main = () => {
+    const [isVisible, setIsVisible] = useState(false);
 
     const [heroText, setHeroText] = useState({
         first: "STOP",
@@ -39,11 +40,11 @@ const Main = () => {
     }, [toggle]);
 
     return (
-        <div className='home-section flex ml-60 mr-60 w-100% items-center h-[calc(100vh)]' id='home-section'>
+        <div className='home-section flex ml-20 mr-20 w-100% items-center h-[calc(100vh)] 3xl:ml-60 3xl:mr-60' id='home-section'>
             <section className='w-1/2 flex justify-center flex-col'>
                 <motion.div
-                    style={{ fontSize: '120px' }}
-                    className='p-0 m-0 flex flex-col leading-none font-bold'
+                    //style={{ fontSize: '120px' }}
+                    className='xl:xl-main-header lg:lg-main-header sm:sm-main-header'
                     initial={{ opacity: 0, y: -80 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
@@ -100,7 +101,9 @@ const Main = () => {
                 </motion.div>
 
             </section>
-            <div style={{ width: "10px", margin: "0 auto" }}>
+            <div
+                className='hidden 4xl:block'
+                style={{ width: "10px", margin: "0 auto" }}>
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -133,8 +136,9 @@ const Main = () => {
                 ></motion.div>
             </div>
 
-            <section className='w-1/2 flex justify-center items-center'>
+            <section className='w-1/2 flex justify-center items-center '>
                 <motion.img
+                    className=' xl:w-[200px] xl:h-[200px] 2xl:w-[300px] 2xl:h-[300px] 2md:block 2md:w-[150px] 2md:h-[150px] sm:hidden '
                     src='/images/iso-block.png'
                     alt='animated image'
                     initial={{ opacity: 0, scale: 0.5 }}

@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities{
+  .sm-main-header{
+    @apply p-0 m-0 flex flex-col leading-none font-bold text-[50px]
+  }
+  .lg-main-header{
+     @apply p-0 m-0 flex flex-col leading-none font-bold text-[88px]
+  }
+  .xl-main-header{
+    @apply p-0 m-0 flex flex-col leading-none font-bold text-9xl;
+  }
+}
+
 body {
   color: #f5f5dc;
   background-color: #1f1f1f;
